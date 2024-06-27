@@ -1,0 +1,40 @@
+<div class="flex justify-center px-10 max-md:px-6 relative">
+    <div class="max-w-6xl w-full h-[72px] flex justify-between items-center">
+        <img class="cursor-pointer" src="/images/shared/desktop/logo.svg" alt="logo" routerLink="/home">
+        <ul class="flex items-center gap-9 max-md:hidden">
+            @for (link of links; track $index) {
+            <li>
+                <a class="text-xs font-bold text-black cursor-pointer hover:text-black/30 transition-all duration-300"
+                    [routerLink]="link.url" routerLinkActive="active">
+                    {{link.label}}
+                </a>
+            </li>
+            }
+        </ul>
+        <button
+            class=" max-md:hidden  h-10 text-white bg-black text-xs font-bold w-40 text-center hover:bg-[#DFDFDF] hover:text-black transition-all duration-300">GET
+            AN INVITE</button>
+        <div #btn class="hidden max-md:flex justify-center items-center text-xl cursor-pointer"
+            (click)="toggleMenuMobile()">
+            <i class="fa-solid " [ngClass]="menuMobile?'fa-xmark':'fa-bars'"></i>
+        </div>
+    </div>
+    <!-- Menu mobile -->
+    <div *ngIf="menuMobile" #menu
+        class="border-t border-black/25 hidden max-md:flex px-6 bg-white z-10 absolute top-[70px] left-0 right-0  flex-col items-center py-10 gap-7 ">
+        <ul class="flex flex-col items-center gap-6">
+            @for (link of links; track $index) {
+            <li>
+                <a class="text-xs font-bold text-black cursor-pointer hover:text-black/30 transition-all duration-300"
+                    [routerLink]="link.url" routerLinkActive="active">
+                    {{link.label}}
+                </a>
+            </li>
+            }
+        </ul>
+        <hr class="w-full border-t border-black/25">
+        <button
+            class="relative z-10 h-10 text-white bg-black text-xs font-bold w-40 text-center hover:bg-[#DFDFDF] hover:text-black transition-all duration-300">GET
+            AN INVITE</button>
+    </div>
+</div>

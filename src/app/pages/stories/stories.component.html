@@ -1,0 +1,46 @@
+<div class="w-full h-[650px] bg-cover bg-center flex items-center justify-center px-10 max-md:px-6 max-sm:h-80"
+    [ngStyle]="{'backgroundImage':'url(/images/stories/desktop/moon-of-appalacia.jpg)'}">
+    <div class="max-w-6xl w-full max-sm:hidden">
+        <div class=" flex flex-col gap-8 max-w-96 w-full text-white ">
+            <span class="text-xs font-bold tracking-[2px]">LAST MONTH’S FEATURED STORY</span>
+            <span class="text-[40px] font-bold tracking-[4px]">HAZY FULL MOON OF APPALACHIA</span>
+            <p class="flex items-center gap-2 text-[13px]">
+                <span class="text-white/75">March 2nd 2020</span>
+                <span>by John Appleseed</span>
+            </p>
+            <span class="text-base text-white/60">The dissected plateau area, while not actually made up of geological
+                mountains, is
+                popularly called
+                "mountains,"
+                especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is
+                extremely rugged.</span>
+            <p class="group flex items-center gap-4 cursor-pointer">
+                <span class="group-hover:underline text-xs font-bold">READ THE STORY</span>
+                <img src="/images/shared/desktop/arrow.svg" alt="">
+            </p>
+        </div>
+    </div>
+</div>
+<div class=" flex-col gap-8  w-full text-white bg-black hidden max-sm:flex py-12 px-6">
+    <span class="text-xs font-bold tracking-[2px]">LAST MONTH’S FEATURED STORY</span>
+    <span class="text-[40px] font-bold tracking-[4px]">HAZY FULL MOON OF APPALACHIA</span>
+    <p class="flex items-center gap-2 text-[13px]">
+        <span class="text-white/75">March 2nd 2020</span>
+        <span>by John Appleseed</span>
+    </p>
+    <span class="text-base text-white/60">The dissected plateau area, while not actually made up of geological
+        mountains, is
+        popularly called
+        "mountains,"
+        especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is
+        extremely rugged.</span>
+    <p class="group flex items-center gap-4 cursor-pointer">
+        <span class="group-hover:underline text-xs font-bold">READ THE STORY</span>
+        <img src="/images/shared/desktop/arrow.svg" alt="">
+    </p>
+</div>
+<div class="grid grid-cols-4 max-[960px]:grid-cols-2 max-sm:grid-cols-1">
+    @for (item of listCard; track $index) {
+    <app-card [data]="item"></app-card>
+    }
+</div>

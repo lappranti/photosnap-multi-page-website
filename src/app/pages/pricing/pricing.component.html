@@ -1,0 +1,133 @@
+<app-card-horizontal [data]="dataCardH"></app-card-horizontal>
+<div class="py-28 flex flex-col gap-12 items-center">
+    <div class="flex justify-center items-center gap-8 text-lg font-bold text-black/50">
+        <span class="transition-all duration-300" [class]="isMonthly?'text-black':''">Monthly</span>
+        <span (click)="isMonthly=!isMonthly"
+            class="w-16 h-8 bg-[#DFDFDF] rounded-2xl px-1 flex items-center cursor-pointer group hover:bg-black transition-all duration-300 relative">
+            <span class="w-6 h-6 rounded-full bg-black group-hover:bg-white transition-all  duration-300 absolute"
+                [ngClass]="isMonthly?'translate-x-[2px]':'translate-x-[30px]'"></span>
+        </span>
+        <span class="transition-all duration-300" [class]="!isMonthly?'text-black':''">Yearly</span>
+    </div>
+    <div class="max-w-6xl w-full  px-10 max-md:px-6 max-[960px]:flex-col  flex items-center gap-8">
+        <div
+            class=" max-sm:items-center  px-10  flex-1 max-sm:flex-none bg-[#F5F5F5] h-[407px] w-full flex flex-col gap-10 justify-center items-center max-[960px]:items-start">
+            <div
+                class="max-sm:flex-col max-sm:items-center w-full flex flex-col gap-10 max-[960px]:flex-row max-[960px]:justify-between">
+                <div
+                    class=" max-sm:items-center flex flex-col items-center gap-[18px] max-[960px]:items-start  max-[960px]:max-w-72">
+                    <span class="text-2xl text-black font-bold">Basic</span>
+                    <span class="max-sm:text-center text-center text-base text-black/50 max-[960px]:text-left">Includes
+                        basic usage of our
+                        platform. Recommended
+                        for
+                        new and
+                        aspiring photographers.</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl font-bold text-black">{{isMonthly?'$19.00':'$190.00'}}</span>
+                    <span class="text-black/60 text-base">{{isMonthly?'per month':'per year'}}</span>
+                </div>
+            </div>
+            <button
+                class="max-sm:max-w-none max-[960px]:max-w-72  w-full h-10 bg-black hover:bg-[#DFDFDF]  hover:text-black  transition-all duration-300 text-white text-xs font-bold cursor-pointer">PICK
+                PLAN</button>
+        </div>
+        <div
+            class="max-[960px]:items-start  max-sm:items-center  p-10 flex-1 max-sm:flex-none bg-black h-[470px] w-full flex flex-col gap-10 justify-center items-center text-white">
+            <div
+                class="max-sm:flex-col max-sm:items-center w-full flex flex-col gap-10 max-[960px]:flex-row max-[960px]:justify-between">
+                <div
+                    class="max-sm:flex-col max-sm:items-center flex flex-col items-center gap-[18px] max-[960px]:items-start  max-[960px]:max-w-72">
+                    <span class="text-2xl font-bold">Pro</span>
+                    <span class="max-sm:text-center text-center text-base text-white/50 max-[960px]:text-left">More
+                        advanced features
+                        available. Recommended for
+                        photography veterans and professionals.</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl font-bold ">{{isMonthly?'$39.00':'$390.00'}}</span>
+                    <span class="text-white/60 text-base">{{isMonthly?'per month':'per year'}}</span>
+                </div>
+            </div>
+            <button
+                class="max-sm:max-w-none max-[960px]:max-w-72  w-full h-10 hover:bg-[#DFDFDF] transition-all duration-300 bg-white text-black text-xs font-bold cursor-pointer">PICK
+                PLAN</button>
+        </div>
+        <div
+            class="max-[960px]:items-start max-sm:items-center px-10  flex-1 max-sm:flex-none bg-[#F5F5F5] h-[407px] w-full flex flex-col gap-10 justify-center items-center">
+            <div
+                class="max-sm:flex-col max-sm:items-center w-full flex flex-col gap-10 max-[960px]:flex-row max-[960px]:justify-between">
+                <div
+                    class="max-sm:flex-col max-sm:items-center flex flex-col items-center gap-[18px] max-[960px]:items-start  max-[960px]:max-w-72">
+                    <span class="text-2xl text-black font-bold">Business</span>
+                    <span
+                        class="max-sm:text-center text-center text-base text-black/50 max-[960px]:text-left">Additional
+                        features
+                        available such as more detailed
+                        metrics. Recommended for business owners.</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-4xl font-bold text-black">{{isMonthly?'$99.00':'$990.00'}}</span>
+                    <span class="text-black/60 text-base">{{isMonthly?'per month':'per year'}}</span>
+                </div>
+            </div>
+            <button
+                class="max-sm:max-w-none max-[960px]:max-w-72  w-full h-10  hover:bg-[#DFDFDF] hover:text-black transition-all duration-300 bg-black text-white text-xs font-bold cursor-pointer">PICK
+                PLAN</button>
+
+        </div>
+    </div>
+</div>
+<div class="flex justify-center pb-28 px-10 max-md:px-6">
+    <div class="flex flex-col gap-24 max-sm:gap-10 max-w-[730px] w-full ">
+        <h2 class="mx-auto text-5xl font-bold trakcing-[4px]">COMPARE</h2>
+        <div class=" min-w-72 overflow-x-auto">
+            <div class="max-w-full w-full text-xs font-bold text-black tracking-[2px]">
+                <div class="flex justify-between pb-6 border-b border-black">
+                    <span>THE FEATURES</span>
+                    <div class="flex justify-between  w-72 max-sm:hidden">
+                        <span>BASIC</span>
+                        <span>PRO</span>
+                        <span>BUSINESS</span>
+                    </div>
+                </div>
+                @for (item of dataTable; track $index) {
+                <div class="flex justify-between py-6 border-b border-[#DFDFDF] max-sm:flex-col max-sm:gap-4">
+                    <span>{{item.feature}}</span>
+                    <div class="flex justify-between  w-72  ">
+                        <span class="flex flex-col gap-2 ">
+                            <span class="text-xs text-black/50 font-bold uppercase hidden max-sm:flex">Basic</span>
+                            <i *ngIf="item.basic" class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="flex flex-col gap-2 ">
+                            <span class="text-xs text-black/50 font-bold uppercase hidden  max-sm:flex">Pro</span>
+                            <i *ngIf="item.pro" class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="flex flex-col gap-2 ">
+                            <span class="text-xs text-black/50 font-bold uppercase hidden  max-sm:flex">Business</span>
+                            <i *ngIf="item.business" class="fa-solid fa-check"></i>
+                        </span>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-full h-72 flex justify-center  px-10 max-md:px-6  bg-cover bg-center relative max-md:after:left-6 max-md:after:bottom-auto max-md:after:h-1 max-md:after:w-32 after:absolute  after:left-0 after:top-0 after:bottom-0 after:w-1 after:bg-gradient-to-t after:from-[#FFC593] after:to-[#5A77FF]"
+    [ngStyle]="{'backgroundImage':'url(/images/shared/desktop/bg-beta.jpg)'}">
+    <div
+        class=" max-w-6xl w-full  flex items-center justify-between max-md:flex-col max-md:items-start max-md:justify-center gap-6">
+        <h2
+            class="text-[40px] max-sm:text-4xl max-sm:leading-[40px] max-sm:tracking-[3px] leading-[48px] font-bold text-white tracking-[4px] max-w-md w-full">
+            We’re
+            in beta.
+            Get your invite today!</h2>
+        <div class="group flex items-center justify-between gap-4 cursor-pointer">
+            <span class="group-hover:underline text-xs font-bold text-wrap tracking-[2px] text-white">READ STORY</span>
+            <img src="/images/shared/desktop/arrow.svg" alt="">
+        </div>
+
+    </div>
+</div>

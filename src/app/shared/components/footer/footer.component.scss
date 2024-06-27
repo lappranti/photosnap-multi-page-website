@@ -1,0 +1,9 @@
+.gradient-icon {
+
+    // background: -webkit-gradient(linear, left top, left bottom, from(#63AFDB), to(#6028F1));
+    &:hover {
+        transition: all .3s;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

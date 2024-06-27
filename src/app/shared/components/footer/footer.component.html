@@ -1,0 +1,58 @@
+<div class="bg-black py-16 px-10 max-md:px-6 flex justify-center">
+    <div class="max-w-6xl w-full flex flex-col gap-16 ">
+        <div class=" flex justify-between max-sm:flex-col max-sm:items-center max-sm:gap-24">
+            <div
+                class="flex items-start gap-28  max-[960px]:flex-col  max-[960px]:gap-4 max-sm:gap-16 max-sm:items-center">
+                <div class="h-full flex flex-col justify-between max-sm:items-center max-sm:gap-10">
+                    <img src="/images/shared/desktop/logo-light.svg" alt="">
+                    <div class="flex items-center gap-3 text-white  max-[960px]:hidden max-sm:flex">
+                        <i
+                            class="fa-brands fa-square-facebook gradient-icon  hover:bg-gradient-to-r hover:from-[#63AFDB] hover:to-[#6028F1] cursor-pointer transition-all duration-300"></i>
+                        <i
+                            class="fa-brands fa-square-youtube  gradient-icon   hover:bg-gradient-to-r hover:from-[#D3205A] hover:to-[#FF5A5A] cursor-pointer transition-all duration-300"></i>
+                        <i
+                            class="fa-brands fa-twitter  gradient-icon   hover:bg-gradient-to-r hover:from-[#65FFEB] hover:to-[#27718A] cursor-pointer transition-all duration-300"></i>
+                        <i
+                            class="fa-brands fa-pinterest  gradient-icon   hover:bg-gradient-to-r hover:from-[#F6C683] hover:to-[#DE3838] cursor-pointer transition-all duration-300"></i>
+                        <i
+                            class="fa-brands fa-instagram  gradient-icon   hover:bg-gradient-to-r hover:from-[#FFC593] hover:to-[#5A77FF] cursor-pointer transition-all duration-300"></i>
+                    </div>
+                </div>
+                <ul class="flex flex-col gap-3  max-[960px]:flex-row max-sm:flex-col max-sm:items-center">
+                    @for (link of links; track $index) {
+                    <li>
+                        <a class="text-xs font-bold text-white cursor-pointer hover:text-white/30 transition-all duration-300"
+                            [routerLink]="link.url">
+                            {{link.label}}
+                        </a>
+                    </li>
+                    }
+                </ul>
+            </div>
+            <div class="flex flex-col justify-between items-end h-full max-sm:items-center max-sm:gap-10">
+                <div class="group flex items-center gap-4 cursor-pointer">
+                    <span class="group-hover:underline group-hover:decoration-1 text-xs text-white font-bold ">GET
+                        AN INVITE</span>
+                    <img src="/images/shared/desktop/arrow.svg" alt="">
+                </div>
+                <p class="text-white/50 text-base  max-[960px]:hidden flex max-sm:flex">Copyright 2019. All Rights
+                    Reserved</p>
+            </div>
+        </div>
+        <div class="max-[960px]:flex hidden w-full  justify-between items-center max-sm:hidden">
+            <div class="flex items-center gap-3 text-white  ">
+                <i
+                    class="fa-brands fa-square-facebook gradient-icon  hover:bg-gradient-to-r hover:from-[#63AFDB] hover:to-[#6028F1] cursor-pointer transition-all duration-300"></i>
+                <i
+                    class="fa-brands fa-square-youtube  gradient-icon   hover:bg-gradient-to-r hover:from-[#D3205A] hover:to-[#FF5A5A] cursor-pointer transition-all duration-300"></i>
+                <i
+                    class="fa-brands fa-twitter  gradient-icon   hover:bg-gradient-to-r hover:from-[#65FFEB] hover:to-[#27718A] cursor-pointer transition-all duration-300"></i>
+                <i
+                    class="fa-brands fa-pinterest  gradient-icon   hover:bg-gradient-to-r hover:from-[#F6C683] hover:to-[#DE3838] cursor-pointer transition-all duration-300"></i>
+                <i
+                    class="fa-brands fa-instagram  gradient-icon   hover:bg-gradient-to-r hover:from-[#FFC593] hover:to-[#5A77FF] cursor-pointer transition-all duration-300"></i>
+            </div>
+            <p class="text-white/50 text-base  ">Copyright 2019. All Rights Reserved</p>
+        </div>
+    </div>
+</div>

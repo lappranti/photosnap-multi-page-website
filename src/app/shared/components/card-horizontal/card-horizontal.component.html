@@ -1,0 +1,24 @@
+<div class="w-full flex items-stretch max-[960px]:flex-col-reverse"
+    [class]="data.isImageLeft?'flex-row':'flex-row-reverse'">
+    <div class=" max-w-[650px] w-full  max-[960px]:max-w-none bg-black flex  py-32"
+        [class]="data.isImageLeft?'bg-black':'bg-white'">
+        <div class="flex flex-col gap-6  w-8/12  pl-16 max-[960px]:px-10 max-[960px]:w-full relative "
+            [ngClass]="data.isFirstEelement?'after:absolute  after:left-0 after:top-0 after:bottom-0 after:w-1 after:bg-gradient-to-t after:from-[#FFC593] after:to-[#5A77FF]':''">
+            <div class="flex flex-col gap-4">
+                <h2 class=" text-[40px] font-bold uppercase" [class]="data.isImageLeft?'text-white':'text-black'">
+                    {{data.title}}
+                </h2>
+                <p class="text-base" [class]="data.isImageLeft?'text-white/60':'text-black/60'">{{data.description}}</p>
+            </div>
+            <div *ngIf="data.textBtn" class="group cursor-pointer flex items-center gap-6"
+                [class]="data.isImageLeft?'text-white':'text-black'">
+                <span class="group-hover:underline font-bold text-xs uppercase">{{data.textBtn}}</span>
+                <img [src]="data.isImageLeft?'/images/shared/desktop/arrow.svg':'/images/shared/desktop/arrow-black.svg'"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <div class="flex-auto min-w-72  max-[960px]:min-w-max  max-[960px]:w-full  max-[960px]:h-[480px] bg-cover bg-center"
+        [ngStyle]="{'backgroundImage':'url('+data.image+')'}">
+    </div>
+</div>
